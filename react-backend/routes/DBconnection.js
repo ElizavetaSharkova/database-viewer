@@ -5,13 +5,15 @@ var mysql      = require('mysql');
     
 /* GET tables listing. */
 router.get('/', function(req, res, next) {
-  let select = 'SHOW TABLES FROM northwind';        
+  let select = 'SELECT TABLE_NAME FROM information_schema.TABLES WHERE Engine= \'InnoDB\' AND TABLE_SCHEMA = \'northwind\' AND TABLE_ROWS != 0';        
   getDataBySelect(res, select);
  
 });
 
 router.get('/:tableName', function(req, res, next) {
-  let select = 'SELECT * FROM northwind.' + req.params.tableName;   
+  let tableName;
+  tableName = "\`" + req.params.tableName + "\`";
+  let select = 'SELECT * FROM northwind.' + tableName;   
   getDataBySelect(res, select);
  
 });

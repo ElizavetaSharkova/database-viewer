@@ -5,3 +5,6 @@
 .table{
     width: auto !important;
 }
+.overflow-x{
+    overflow-x: auto;
+}

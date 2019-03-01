@@ -1,7 +1,6 @@
-/*
- * TableRow css File
-*/
 
-.TableRow {
-    /* propertys here */
+td div{
+    max-height: 10vh;
+    overflow-y: auto;
+    min-width: 9vh;
 }
