@@ -3,6 +3,6 @@
 }
 
  */
-.App .row{
+.App > .row{
   min-height: 100vh;
 }
