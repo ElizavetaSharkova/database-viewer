@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Finder.css';
 
 class Finder extends Component {
   state = {

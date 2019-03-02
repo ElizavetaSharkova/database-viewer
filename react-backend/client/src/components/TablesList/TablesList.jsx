@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './TablesList.css';
 
 class TablesList extends Component {
 

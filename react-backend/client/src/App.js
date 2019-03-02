@@ -24,10 +24,6 @@ class App extends Component {
     }
   };
   componentWillMount() {
-    this.selectTable('categories'); //I will edit it later
-  }
-
-  componentDidMount() {
     let tables = [];
     fetch('/db').then(res => res.json())
       .then(data => {
@@ -35,12 +31,11 @@ class App extends Component {
         data.forEach(d => {
           tables.push(d['TABLE_NAME']);
         });
+        this.selectTable(tables[0]);
         this.setState({
           tables: tables
         })
       });
-
-
   }
 
   finding() {
